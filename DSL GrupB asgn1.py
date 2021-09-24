@@ -26,7 +26,7 @@ while(ch == "y"):
     n = int(input("Enter the number of students: "))
     rollNo = []
     for i in range(n):
-        print("Enter the rollNo of student",i+1,": ", end=" ")
+        print("Enter the rollNo of student",i+1,":", end=" ")
         roll = int(input())
         rollNo.append(roll)
     print("Which search operation you want to perform: ")
