@@ -7,6 +7,7 @@ def binary(rollNo, x):
         mid = (lower+upper)//2
         if (rollNo[mid] == x):
             flag = 1
+            ind = mid
             break
         elif (rollNo[mid] > x):
             lower = 0
@@ -16,20 +17,21 @@ def binary(rollNo, x):
             upper = len(rollNo)-1
 
     if (flag == 1):
-        print(x, "is present")
+        print(x, "has attended")
+        print("The index of ",x,"is ",ind)
     else:
-        print(x, "is not present")
+        print(x, "has not attended")
 
 
 ch = "y"
 while(ch == "y"):
-    n = int(input("Enter the number of students: "))
+    n = int(input("Enter the number of students who attended: "))
     rollNo = []
     for i in range(n):
         print("Enter the rollNo of student",i+1,":", end=" ")
         roll = int(input())
         rollNo.append(roll)
-    print("Which search operation you want to perform: ")
+    print("Which search method you want to perform: ")
     print("1. Linear Search")
     print("2.Binary Search")
     choice = int(input("Enter the choice number you want to perform: "))
@@ -39,11 +41,13 @@ while(ch == "y"):
         for i in range(n):
             if (x == rollNo[i]):
                 flag = 1
+                ind = i
                 break
         if (flag == 1):
-            print(x, "is present")
+            print(x, "has attended")
+            print("The index of ",x,"is ",ind)
         else:
-            print(x, "is not present")
+            print(x, "has not attended")
 
     if (choice == 2):
         x = int(input("Enter the rollNo you want to search: "))
