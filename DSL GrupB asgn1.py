@@ -1,6 +1,7 @@
 def binary(rollNo, x):
     flag = 0
     rollNo.sort()
+    print("The sorted list of rollNo is", rollNo)
     lower = 0
     upper = len(rollNo)-1
     while (upper >= lower):
@@ -24,15 +25,16 @@ def binary(rollNo, x):
 
 
 ch = "y"
+n = int(input("Enter the number of students who attended: "))
+rollNo = []
+for i in range(n):
+    print("Enter the rollNo of student",i+1,":", end=" ")
+    roll = int(input())
+    rollNo.append(roll)
 while(ch == "y"):
-    n = int(input("Enter the number of students who attended: "))
-    rollNo = []
-    for i in range(n):
-        print("Enter the rollNo of student",i+1,":", end=" ")
-        roll = int(input())
-        rollNo.append(roll)
+    
     print("Which search method you want to perform: ")
-    print("1. Linear Search")
+    print("1.Linear Search")
     print("2.Binary Search")
     choice = int(input("Enter the choice number you want to perform: "))
     if (choice == 1):
