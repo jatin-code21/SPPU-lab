@@ -22,10 +22,11 @@ void selectionSort(int arr[], int n)
     }
     cout << "The top 5 score is: "
          << nline;
-    for (int i = 0; i < 5; i++)
+    for (int i = n - 1; i >= n - 5; i--)
     {
         cout << arr[i] << " ";
     }
+    cout << nline;
 }
 
 void bubbleSort(int arr[], int n)
@@ -44,7 +45,7 @@ void bubbleSort(int arr[], int n)
     }
 
     cout << "The top 5 score is: " << nline;
-    for (int i = 0; i < 5; i++)
+    for (int i = n - 1; i >= n - 5; i--)
     {
         cout << arr[i] << " ";
     }
