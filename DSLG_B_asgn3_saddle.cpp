@@ -27,11 +27,12 @@ int main()
         }
         cout << "\n";
     }
-
+    int min;
     for (int i = 0; i < r; i++)
     {
-        flag = 0;
-        int min = arr[i][0], c_ind = 0;
+        // flag = 0;
+        min = arr[i][0];
+        int c_ind = 0;
         for (int j = 1; j < c; j++)
         {
             if (arr[i][j] < min)
@@ -40,21 +41,30 @@ int main()
                 c_ind = j;
             }
         }
+        int max = arr[0][c_ind];
         for (int k = 0; k < r; k++)
         {
-            if (arr[k][c_ind] > min)
+            if (arr[k][c_ind] > max)
             {
-                flag = 0;
-                break;
+                max = arr[k][c_ind];
             }
-            else
-            {
-                flag = 1;
-            }
+            // if (arr[k][c_ind] > min)
+            // {
+            //     flag = 0;
+            //     break;
+            // }
+            // else
+            // {
+            //     flag = 1;
+            // }
         }
-        if (flag == 1)
+        if (max == min)
         {
             cout << "Saddle point is: " << min << "\n";
         }
+        // if (flag == 1)
+        // {
+        //     cout << "Saddle point is: " << min << "\n";
+        // }
     }
 }
