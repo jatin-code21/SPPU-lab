@@ -1,6 +1,7 @@
 {
-    "files.associations": {
-        "python": "python",
-        "iostream": "cpp"
-    }
+  "files.associations": {
+    "python": "python",
+    "iostream": "cpp"
+  },
+  "python.formatting.provider": "autopep8"
 }
